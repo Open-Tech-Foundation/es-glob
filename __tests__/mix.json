@@ -1,0 +1,13 @@
+[
+  ["a/b/.x", "**/.x/**", false],
+  ["a/b/.x/c", "**/.x/**", true],
+  ["a.a", "[a-d]*.[a-b]", true],
+  ["abd", "[a-y]*[^c]", true],
+  ["man/man1/bash.1", "*/man*/bash.*", true],
+  ["abc", "a***c", true],
+  ["abc", "a*****?c", true],
+  ["abcdecdhjk", "a*cd**?**??k", true],
+  ["-", "[-abc]", true],
+  ["[", "[[]", true],
+  ["[abc", "[*", false]
+]
