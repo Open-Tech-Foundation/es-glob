@@ -9,5 +9,6 @@
   ["abcdecdhjk", "a*cd**?**??k", true],
   ["-", "[-abc]", true],
   ["[", "[[]", true],
-  ["[abc", "[*", false]
+  ["[abc", "[*", false],
+  ["*.txt", "\\*.txt", true]
 ]
