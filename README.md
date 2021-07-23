@@ -1,6 +1,6 @@
 # @open-tech-world/es-glob
 
-> Description
+> A glob pattern matching library.
 
 ## Installation
 
@@ -18,4 +18,4 @@ yarn add @open-tech-world/es-glob
 
 ## License
 
-Copyright (c) 2021, Thanga Ganapathy ([MIT License](./LICENSE)).
+Copyright (c) 2021, [Thanga Ganapathy](https://thanga-ganapathy.github.io) ([MIT License](./LICENSE)).
