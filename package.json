@@ -1,8 +1,15 @@
 {
   "name": "@open-tech-world/es-glob",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A glob pattern matching library.",
-  "keywords": ["glob", "pattern", "match", "matching", "lib", "library"],
+  "keywords": [
+    "glob",
+    "pattern",
+    "match",
+    "matching",
+    "lib",
+    "library"
+  ],
   "author": {
     "name": "Thanga Ganapathy",
     "email": "ganapathy888@gmail.com",
