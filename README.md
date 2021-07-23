@@ -1,7 +1,7 @@
 <div align="center">
 
 # @open-tech-world/es-glob
-
+[![Build](https://github.com/open-tech-world/es-glob/actions/workflows/build.yml/badge.svg)](https://github.com/open-tech-world/es-glob/actions/workflows/build.yml) [![CodeFactor](https://www.codefactor.io/repository/github/open-tech-world/es-glob/badge)](https://www.codefactor.io/repository/github/open-tech-world/es-glob)
 </div>
 
 > A [glob](https://en.wikipedia.org/wiki/Glob_(programming)) pattern matching library.
