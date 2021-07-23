@@ -4,6 +4,7 @@ function esGlob(str: string, pattern: string): boolean {
   let flag = false;
   const negate = pattern[0] === '!';
   const regexStr = convertToRegExp(negate ? pattern.substring(1) : pattern);
+
   try {
     const regexp = new RegExp(regexStr);
     const result = regexp.exec(str);

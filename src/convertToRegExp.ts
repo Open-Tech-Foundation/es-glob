@@ -32,7 +32,7 @@ function convertToRegExp(pattern: string): string {
 
     if (charMap[pattern[i]]) {
       regexStr += charMap[pattern[i]];
-    } else if (pattern[i].match(/[a-zA-Z]/)) {
+    } else {
       regexStr += pattern[i];
     }
   }

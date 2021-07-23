@@ -1,9 +1,10 @@
 [
-    ["", "!a", true],
-    ["a", "!a", false],
-    ["ab", "!a*", false],
-    ["ab", "!*b", false],
-    ["ac", "!*b", true],
-    ["a/b.js", "!a/*.js", false],
-    ["a/b/c/d.js", "!a/**/[a-f].js", false]
+  ["", "!a", true],
+  ["a", "!a", false],
+  ["ab", "!a*", false],
+  ["ab", "!*b", false],
+  ["ac", "!*b", true],
+  ["a/b.js", "!a/*.js", false],
+  ["a/b/c/d.js", "!a/**/[a-f].js", false],
+  ["node_modules", "!node_modules", false]
 ]
