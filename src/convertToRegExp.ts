@@ -5,7 +5,7 @@ function convertToRegExp(pattern: string): string {
   const charMap: Record<string, string> = {
     '/': '\\/',
     '*': '[^/]*',
-    '**': '(.*)',
+    '**': '(?:.*)',
     '.': '\\.',
     '?': '[^/]',
   };
