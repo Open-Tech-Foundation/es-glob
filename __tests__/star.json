@@ -1,0 +1,19 @@
+[
+  ["", "", true],
+  ["", "*", true],
+  ["a", "a", true],
+  ["a", "a*", true],
+  ["A", "A", true],
+  ["ab", "ab", true],
+  ["abc", "ab*", true],
+  ["abcd", "ab*d", true],
+  ["a.txt", "*", true],
+  ["/b.js", "*", false],
+  ["/c.js", "/c.*", true],
+  ["/d.json", "/*.json", true],
+  ["/.e.config.json", "/*", true],
+  ["/a/b.jpg", "/*", false],
+  ["/a/b.jpg", "/*/*", true],
+  ["The quick brown fox", "*quick*", true],
+  ["a/../b", "a/*/b", true]
+]

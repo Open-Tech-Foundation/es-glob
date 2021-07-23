@@ -1,0 +1,23 @@
+[
+  ["", "[a]", false],
+  ["a", "[a]", true],
+  ["a", "[ab]", true],
+  ["b", "[ab]", true],
+  ["a", "[a-c]", true],
+  ["b", "[a-c]", true],
+  ["c", "[a-c]", true],
+  ["d", "[a-c]", false],
+  ["d", "[a-cd]", true],
+  ["5", "[0-9]", true],
+  ["a", "[^a]", false],
+  ["b", "[^a]", true],
+  ["a", "[^abc]", false],
+  ["b", "[^abc]", false],
+  ["c", "[^abc]", false],
+  ["b", "[a^bc]", true],
+  ["a", "[!a]", false],
+  ["b", "[!a]", true],
+  ["c", "[!a-f]", false],
+  ["g", "[!a-f]", true],
+  ["ab", "[a-f]*", true]
+]

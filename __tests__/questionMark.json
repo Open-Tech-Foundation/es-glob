@@ -1,0 +1,12 @@
+[
+  ["", "?", false],
+  ["a", "?", true],
+  ["ab", "?b", true],
+  ["abc", "a?c", true],
+  ["abc", "ab?", true],
+  ["abc", "a??", true],
+  ["abcdef", "ab?d?f", true],
+  [".bashrc", "?bashrc", true],
+  ["abbc", "ab?bc", false],
+  ["/abc", "?abc", false]
+]
