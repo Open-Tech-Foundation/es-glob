@@ -3,7 +3,8 @@ import matchBracket from './matchBracket';
 function convertToRegExp(pattern: string): string {
   let regexStr = '';
   const charMap: Record<string, string> = {
-    '/': '\\/(?:(?=.+))',
+    '/': '\\/',
+    '/*': '\\/(?:(?=.+))[^\\/]*',
     '*': '[^\\/]*',
     '**': '(?:.*)',
     '.': '\\.',
@@ -11,6 +12,26 @@ function convertToRegExp(pattern: string): string {
   };
 
   for (let i = 0; i < pattern.length; i++) {
+    if (
+      pattern[i] === '/' &&
+      pattern[i + 1] === '*' &&
+      pattern[i + 2] !== '*'
+    ) {
+      regexStr += charMap['/*'];
+      i += 1;
+      continue;
+    }
+
+    if (
+      pattern[i] === '/' &&
+      pattern[i + 1] === '*' &&
+      pattern[i + 2] === '*'
+    ) {
+      regexStr += charMap['**'];
+      i += 2;
+      continue;
+    }
+
     if (pattern[i] === '*' && pattern[i + 1] === '*') {
       regexStr += charMap['**'];
       i += 1;

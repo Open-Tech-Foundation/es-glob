@@ -3,11 +3,14 @@
   ["abcdef", "ab**", true],
   ["abcdef", "ab***ef", true],
   ["a/b", "**", true],
+  ["a", "a/**", true],
+  ["a/", "a/**", true],
+  ["a/b", "a/**", true],
   ["/a/b/c", "**", true],
   ["a/b.txt", "**/*.txt", true],
-  ["a/b/.x", "**/.x/**", false],
+  ["a/b/.x", "**/.x/**", true],
   ["a/b/.x/c", "**/.x/**", true],
   ["a/b/.x/c/d", "**/.x/**", true],
-  [".x/.x", "**/.x/**", false],
+  [".x/.x", "**/.x/**", true],
   ["a/../b", "a/**/b", true]
 ]
