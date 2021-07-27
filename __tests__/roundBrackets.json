@@ -1,0 +1,15 @@
+[
+    ["()", "", false],
+    ["()", "()", false],
+    ["()", "\\(\\)", true],
+    ["a", "(a)", true],
+    ["a", "(b)", false],
+    ["ab", "a(b)", true],
+    ["ab", "a(b|c)", true],
+    ["ac", "a(b|c)", true],
+    ["a.js", "*.(js|ts)", true],
+    ["a.ts", "*.(js|ts)", true],
+    ["a.js", "*.((js|ts)|json)", true],
+    ["b.ts", "*.((js|ts)|json)", true],
+    ["c.json", "*.((js|ts)|json)", true]
+]

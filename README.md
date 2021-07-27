@@ -46,6 +46,8 @@
 
 ❌ Regular expression
 
+✔️ `(|)` Logical OR Group
+
 ## Installation
 
 Using npm
@@ -86,6 +88,14 @@ esGlob('b', '[^a-c]') // false
 esGlob('*.txt', '\\*.txt') // true
 
 esGlob('node_modules', '!node_modules') // false
+
+esGlob('a', '(a|b)') // true
+
+esGlob('config.js', '*.(js|json)') // true
+
+esGlob('tsconfig.json', '*.(js|json)') // true
+
+esGlob('index.ts', '*.(js|jsx|tsx)') // false
 ```
 
 ## References

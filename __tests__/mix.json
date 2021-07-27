@@ -10,5 +10,6 @@
   ["-", "[-abc]", true],
   ["[", "[[]", true],
   ["[abc", "[*", false],
-  ["*.txt", "\\*.txt", true]
+  ["*.txt", "\\*.txt", true],
+  ["c.jsx", "*.((js?|ts)|json)", true]
 ]
