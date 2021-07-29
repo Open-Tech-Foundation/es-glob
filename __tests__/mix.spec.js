@@ -1,4 +1,4 @@
-import esGlob from '../lib/index.js';
+import { matchGlob } from '../lib/index.js';
 import { readFileSync } from 'fs';
 
 const mixJSON = JSON.parse(
@@ -8,7 +8,7 @@ const mixJSON = JSON.parse(
 describe('esGlob', () => {
   test('mix', () => {
     for (const row of mixJSON) {
-      expect(esGlob(row[0], row[1])).toBe(row[2]);
+      expect(matchGlob(row[0], row[1])).toBe(row[2]);
     }
   });
 });

@@ -1,4 +1,4 @@
-import esGlob from '../lib/index.js';
+import { matchGlob } from '../lib/index.js';
 import { readFileSync } from 'fs';
 
 const roundBracketsJSON = JSON.parse(
@@ -8,7 +8,7 @@ const roundBracketsJSON = JSON.parse(
 describe('esGlob', () => {
   test('roundBrackets', () => {
     for (const row of roundBracketsJSON) {
-      expect(esGlob(row[0], row[1])).toBe(row[2]);
+      expect(matchGlob(row[0], row[1])).toBe(row[2]);
     }
   });
 });

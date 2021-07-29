@@ -1,4 +1,4 @@
-import esGlob from '../lib/index.js';
+import { matchGlob } from '../lib/index.js';
 import { readFileSync } from 'fs';
 
 const negationJSON = JSON.parse(
@@ -8,7 +8,7 @@ const negationJSON = JSON.parse(
 describe('esGlob', () => {
   test('negation', () => {
     for (const row of negationJSON) {
-      expect(esGlob(row[0], row[1])).toBe(row[2]);
+      expect(matchGlob(row[0], row[1])).toBe(row[2]);
     }
   });
 });
