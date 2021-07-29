@@ -19,6 +19,7 @@ describe('matchPathGlob', () => {
     expect(matchPathGlob('a', 'a')).toBeTruthy();
     expect(matchPathGlob('abc', 'abc')).toBeTruthy();
     expect(matchPathGlob('a/b', 'a/b')).toBeTruthy();
+    expect(matchPathGlob('a', 'a/*')).toBeTruthy();
     expect(matchPathGlob('a/a', 'a/*')).toBeTruthy();
     expect(matchPathGlob('a/b', 'a/*')).toBeTruthy();
     expect(matchPathGlob('a/b', 'a/*/*')).toBeTruthy();

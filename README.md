@@ -65,37 +65,49 @@ yarn add @open-tech-world/es-glob
 ## Usage
 
 ```ts
-import esGlob from '@open-tech-world/es-glob';
+import { matchGlob } from '@open-tech-world/es-glob';
 
-esGlob(str: string, pattern: string): boolean;
+matchGlob(str: string, pattern: string): boolean;
 ```
 
 ## Examples
 
 ```ts
-esGlob('/a.json', '/*.json') // true
+matchGlob('/a.json', '/*.json') // true
 
-esGlob('a/b/.x/c/d', '**/.x/**') // true
+matchGlob('a/b/.x/c/d', '**/.x/**') // true
 
-esGlob('abc', 'ab?') // true
+matchGlob('abc', 'ab?') // true
 
-esGlob('b', '[a-c]') // true
+matchGlob('b', '[a-c]') // true
 
-esGlob('a', '[!a-c]') // false
+matchGlob('a', '[!a-c]') // false
 
-esGlob('b', '[^a-c]') // false
+matchGlob('b', '[^a-c]') // false
 
-esGlob('*.txt', '\\*.txt') // true
+matchGlob('*.txt', '\\*.txt') // true
 
-esGlob('node_modules', '!node_modules') // false
+matchGlob('node_modules', '!node_modules') // false
 
-esGlob('a', '(a|b)') // true
+matchGlob('a', '(a|b)') // true
 
-esGlob('config.js', '*.(js|json)') // true
+matchGlob('config.js', '*.(js|json)') // true
 
-esGlob('tsconfig.json', '*.(js|json)') // true
+matchGlob('tsconfig.json', '*.(js|json)') // true
 
-esGlob('index.ts', '*.(js|jsx|tsx)') // false
+matchGlob('index.ts', '*.(js|jsx|tsx)') // false
+```
+
+#### matchPathGlob
+
+It matches a path in a glob pattern.
+
+```ts
+import { matchPathGlob } from '@open-tech-world/es-glob';
+
+matchPathGlob('a', 'a/*') // true
+matchPathGlob('a/b', 'a/*') // true
+matchPathGlob('a/b/c', 'a/*') // false
 ```
 
 ## References
