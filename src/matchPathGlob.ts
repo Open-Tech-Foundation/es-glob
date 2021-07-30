@@ -1,30 +1,56 @@
 import convertToRegExp from './convertToRegExp';
 
+function isMatch(str: string, pat: string): boolean {
+  if (!pat) {
+    return false;
+  }
+  const regExpStr = '^' + convertToRegExp(pat) + '$';
+  return new RegExp(regExpStr).test(str);
+}
+
 function matchPathGlob(path: string, pattern: string): boolean {
   try {
     if (pattern.length === 0) {
       return false;
     }
 
-    const pathArr = pattern.split('/');
-    const pathRegExpArr = [];
+    const pathArr = path.split('/');
+    const patternArr = pattern.split('/');
+    let flag = false;
+    let pIndex = 0;
+    let globStarCount = 0;
 
     for (let i = 0; i < pathArr.length; i++) {
-      pathRegExpArr.push(convertToRegExp(pathArr[i]));
-    }
+      const dir = pathArr[i];
+      const pat = patternArr[pIndex];
+      const isGlobStar = pat.match(/\*\*/);
 
-    const resultArr = [pathRegExpArr[0] + '\\/?'];
+      if (isMatch(dir, pat)) {
+        flag = true;
 
-    for (let i = 1; i < pathRegExpArr.length; i++) {
-      if (i === pathRegExpArr.length - 1) {
-        resultArr.push(pathRegExpArr[i]);
-      } else {
-        resultArr.push(pathRegExpArr[i] + '?\\/?');
+        if (isGlobStar) {
+          if (globStarCount === 0) {
+            globStarCount++;
+            continue;
+          }
+
+          if (globStarCount >= 1 && isMatch(dir, patternArr[pIndex + 1])) {
+            pIndex++;
+            globStarCount = 0;
+          } else {
+            globStarCount++;
+            continue;
+          }
+        }
+
+        pIndex++;
+        continue;
       }
-    }
-    const regExpStr = '^' + resultArr.join('') + '$';
 
-    return new RegExp(regExpStr).test(path);
+      return false;
+    }
+
+    return flag;
   } catch {
     return false;
   }

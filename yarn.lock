@@ -730,7 +730,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@open-tech-world/es-glob@workspace:."
   dependencies:
-    "@rollup/plugin-typescript": ^8.2.3
+    "@rollup/plugin-typescript": ^8.2.4
     "@types/jest": ^26.0.24
     "@typescript-eslint/eslint-plugin": ^4.28.5
     "@typescript-eslint/parser": ^4.28.5
@@ -741,14 +741,14 @@ __metadata:
     eslint-plugin-prettier: ^3.4.0
     jest: ^27.0.6
     prettier: ^2.3.2
-    rollup: ^2.54.0
+    rollup: ^2.55.1
     typescript: ^4.3.5
   languageName: unknown
   linkType: soft
 
-"@rollup/plugin-typescript@npm:^8.2.3":
-  version: 8.2.3
-  resolution: "@rollup/plugin-typescript@npm:8.2.3"
+"@rollup/plugin-typescript@npm:^8.2.4":
+  version: 8.2.4
+  resolution: "@rollup/plugin-typescript@npm:8.2.4"
   dependencies:
     "@rollup/pluginutils": ^3.1.0
     resolve: ^1.17.0
@@ -756,7 +756,7 @@ __metadata:
     rollup: ^2.14.0
     tslib: "*"
     typescript: ">=3.7.0"
-  checksum: c4683eb31e421c837a640d6677e6fa91d2dc56e287920280a6bfa1b4a5c0c4d6ad57fc4780fd3bc847e05cb0247032c2b3886fc56cbd2ac0e4ecdf3d6ae256bb
+  checksum: 59e32ed2bfc71ccef01158abf29ba4d4dd5841485b167f91397e8137771543226b0c60a41621fd276b68093fa54bac778ccae3bfcc0b668ce01aef011b00358e
   languageName: node
   linkType: hard
 
@@ -4211,9 +4211,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.54.0":
-  version: 2.54.0
-  resolution: "rollup@npm:2.54.0"
+"rollup@npm:^2.55.1":
+  version: 2.55.1
+  resolution: "rollup@npm:2.55.1"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -4221,7 +4221,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: caf0de927d472ba085f2b313c70eb3412af4f0aba24e7abce5b4bc3f896cee0076a06c7172f1fcf0b58f1413c938f8f2987f17af746dcc144df97f7148ddeb2d
+  checksum: 798aa251572263d52b3ed4c77e2744817baf296688393d2e80d8f51ff885494232f3b32dcc23f42bc68704f66732f9015abc10aad3d16acf567013ae2512ccb1
   languageName: node
   linkType: hard
 
