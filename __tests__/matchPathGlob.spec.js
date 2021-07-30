@@ -39,5 +39,6 @@ describe('matchPathGlob', () => {
     expect(matchPathGlob('a/b/c/d/e/f', 'a/**/d/**/g')).toBeTruthy();
     expect(matchPathGlob('a/b/c/d/e/f/g', 'a/**/d/**/g')).toBeTruthy();
     expect(matchPathGlob('a/a/c/d/e/f/g', 'a/[a-c]/**/d/**/g')).toBeTruthy();
+    expect(matchPathGlob('a/b', 'a/**/*')).toBeTruthy();
   });
 });

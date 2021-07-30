@@ -23,16 +23,6 @@ function convertToRegExp(pattern: string): string {
       continue;
     }
 
-    if (
-      pattern[i] === '/' &&
-      pattern[i + 1] === '*' &&
-      pattern[i + 2] === '*'
-    ) {
-      regexStr += charMap['**'];
-      i += 2;
-      continue;
-    }
-
     if (pattern[i] === '*' && pattern[i + 1] === '*') {
       regexStr += charMap['**'];
       i += 1;

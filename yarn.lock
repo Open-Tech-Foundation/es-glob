@@ -740,6 +740,8 @@ __metadata:
     eslint-plugin-jest: ^24.4.0
     eslint-plugin-prettier: ^3.4.0
     jest: ^27.0.6
+    minimatch: ^3.0.4
+    picomatch: ^2.3.0
     prettier: ^2.3.2
     rollup: ^2.55.1
     typescript: ^4.3.5
@@ -3957,7 +3959,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picomatch@npm:^2.0.4, picomatch@npm:^2.2.2, picomatch@npm:^2.2.3":
+"picomatch@npm:^2.0.4, picomatch@npm:^2.2.2, picomatch@npm:^2.2.3, picomatch@npm:^2.3.0":
   version: 2.3.0
   resolution: "picomatch@npm:2.3.0"
   checksum: 80113a0fb70cfa62730d5aa3fd3d45b76bf3985f8494080ab2de1cc1fa3ba96d77990c7553a81401e16c51c0eb19c27cf5bc94f2196155090f26c8a167968001
