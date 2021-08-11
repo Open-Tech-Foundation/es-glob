@@ -733,7 +733,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@open-tech-world/es-glob@^0.7.0, @open-tech-world/es-glob@workspace:.":
+"@open-tech-world/es-glob@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "@open-tech-world/es-glob@npm:0.7.0"
+  checksum: ac3dcef46492e563c7ff4982290df2cad3a9cfcbba170092ec5a6cfbff1b865399aa8acea286d300e6c5435015fecdf064632c98cf0d4f7e88ccd8675904a4f9
+  languageName: node
+  linkType: hard
+
+"@open-tech-world/es-glob@workspace:.":
   version: 0.0.0-use.local
   resolution: "@open-tech-world/es-glob@workspace:."
   dependencies:
