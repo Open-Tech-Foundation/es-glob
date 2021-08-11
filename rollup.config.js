@@ -1,13 +1,19 @@
 import typescript from '@rollup/plugin-typescript';
+// import { clean } from '@open-tech-world/rollup-plugin-clean';
 
 export default {
   input: 'src/index.ts',
   output: [
     {
-      dir: './lib',
+      file: './lib/index.cjs',
+      format: 'cjs',
+    },
+    {
+      file: './lib/index.esm.js',
       format: 'esm',
     },
   ],
   plugins: [typescript({ tsconfig: './tsconfig.json' })],
+  // plugins: [clean('lib/**'), typescript({ tsconfig: './tsconfig.json' })],
   external: [],
 };

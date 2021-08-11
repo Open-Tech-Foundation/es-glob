@@ -1,4 +1,4 @@
-import { matchPathGlob } from '../lib/index.js';
+import { matchPathGlob } from '../lib/index.esm.js';
 
 describe('matchPathGlob', () => {
   it('does not match', () => {

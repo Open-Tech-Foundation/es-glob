@@ -1,4 +1,4 @@
-import { matchGlob } from '../lib/index.js';
+import { matchGlob } from '../lib/index.esm.js';
 import { readFileSync } from 'fs';
 
 const mixJSON = JSON.parse(
